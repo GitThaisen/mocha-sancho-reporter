@@ -1,0 +1,23 @@
+{
+  "name": "mocha-sancho-reporter",
+  "version": "0.1.0",
+  "description": "A mocha report that creates a HTML report with included system output.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint"
+  },
+  "author": "Gunnar André Reinseth",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.5.1",
+    "mocha": "^2.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1"
+  },
+  "keywords": [
+    "mocha",
+    "reporter",
+    "html"
+  ]
+}

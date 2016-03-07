@@ -1,0 +1,14 @@
+<li class="element <%= cssClasses %>">
+  <div class="title" onclick="toggleDetails(this)"><%= title %></div>
+  <div class="details">
+    <pre class="hooks-output"><%= hooksOutput %></pre>
+    <pre class="test-output"><%= testOutput %></pre>
+    <pre class="err"><%= err %></pre>
+  </div>
+
+  <% if (children.length) { %>
+  <ul>
+    <% children.forEach(function (child) { %><%= child %><% }) %>
+  </ul>
+  <% } %>
+</li>
