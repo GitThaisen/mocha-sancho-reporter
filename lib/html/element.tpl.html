@@ -1,14 +1,10 @@
-<li class="element <%= cssClasses %>">
-  <div class="title" onclick="toggleDetails(this)"><%= title %></div>
-  <div class="details">
+<div class="<%= cssClasses %>">
+  <div class="title" style="margin-left: <%= depth * 20 + 40 %>px"><a href="#" onclick="toggleDetails(event)"><%= title %></a></div>
+  <div class="details" style="padding-left: <%= depth * 20 + 40 %>px">
     <pre class="hooks-output"><%= hooksOutput %></pre>
     <pre class="test-output"><%= testOutput %></pre>
     <pre class="err"><%= err %></pre>
   </div>
 
-  <% if (children.length) { %>
-  <ul>
-    <% children.forEach(function (child) { %><%= child %><% }) %>
-  </ul>
-  <% } %>
-</li>
+  <% children.forEach(function (child) { print(child); }) %>
+</div>
