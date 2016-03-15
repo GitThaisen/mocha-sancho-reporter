@@ -1,6 +1,6 @@
 {
   "name": "mocha-sancho-reporter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A mocha report that creates a HTML report with included system output.",
   "main": "index.js",
   "scripts": {
