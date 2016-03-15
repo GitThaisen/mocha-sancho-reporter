@@ -4,7 +4,9 @@
   "description": "A mocha report that creates a HTML report with included system output.",
   "main": "index.js",
   "scripts": {
-    "lint": "jshint"
+    "lint": "jshint",
+    "test": "mocha --reporter $PWD/lib/reporter",
+    "start": "npm test -- --watch"
   },
   "author": "Gunnar André Reinseth",
   "license": "ISC",
