@@ -125,3 +125,7 @@ body, html {
 .failures-only .test.pending {
   display: none;
 }
+
+.failures-only .suite:not(.root):not(.contains-failures) {
+  display: none;
+}
