@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test report</title>
+  <% styleSheets.forEach(function(styleSheet) { %>
+  <style>
+  <%= styleSheet %>
+  </style>
+  <% }) %>
+</head>
+<body>
+
+<div class="stats">
+  <div class="item">Passes: <%= stats.passes %></div>
+  <div class="item">Failures: <%= stats.failures %></div>
+  <div class="item">Pending: <%= stats.pending %></div>
+  <div class="item">Duration: <%= stats.duration %></div>
+
+  <div class="stats-bar">
+    <div class="stats-bar-item bg-pass" style="width: <%= stats.passesPercent * 100 %>%"></div>
+    <div class="stats-bar-item bg-fail" style="width: <%= stats.failuresPercent * 100 %>%"></div>
+    <div class="stats-bar-item bg-pending" style="width: <%= stats.pendingPercent * 100 %>%"></div>
+  </div>
+</div>
+
+<div class="filters">
+  <label>
+    <input id="failures-only" type="checkbox" value="only-failures" onclick="toggleFailuresOnly()">
+    Only show failures
+  </label>
+</div>
+
+<%= report %>
+
+<script>
+  function toggleDetails(event) {
+    event.preventDefault();
+    event.currentTarget.parentNode.parentNode.classList.toggle('show-details');
+  }
+
+  function toggleFailuresOnly() {
+    if (document.getElementById('failures-only').checked)
+      location.hash = '#failures';
+    else
+      location.hash = '';
+
+    update();
+  }
+
+  function update() {
+    var failuresOnly = location.hash == '#failures';
+    document.getElementById('failures-only').checked = failuresOnly;
+    document.body.classList.toggle('failures-only', failuresOnly);
+  }
+
+  document.addEventListener('DOMContentLoaded', update);
+  document.addEventListener('hashchange', update);
+</script>
+</body>
+</html>
