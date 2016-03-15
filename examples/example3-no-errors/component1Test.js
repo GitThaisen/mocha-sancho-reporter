@@ -5,7 +5,7 @@ describe('Component 1', function () {
       console.log('(this should make it to the test report.)');
     });
 
-    it('more stuff', function () {});
+    it('more stuff');
 
     describe('nested description 1', function () {
       beforeEach(function () {
@@ -16,20 +16,16 @@ describe('Component 1', function () {
         console.log('Yay!');
       });
 
-      it('but this fails', function () {
-        throw new Error('No!');
-      });
+      it('and more...', function () {});
     });
   });
 
   describe('doOtherStuff()', function () {
     describe('when stuff is stuffed', function () {
       it('should be alright', function () {});
-      it('but some things might fail here as well', function () {
-        console.log('Ok, trying to do ...');
-      });
-      it('work in progress', function () {});
-      it('even more to be done', function () {});
+      it('but some things might fail here as well', function () {});
+      it('work in progress');
+      it('even more to be done');
     });
   });
 });

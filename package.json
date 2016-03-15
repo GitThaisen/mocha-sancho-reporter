@@ -8,7 +8,8 @@
     "test": "mocha --reporter $PWD/lib/reporter",
     "example1": "npm test -- --reporter-options reportPath=test-report-example1.html examples/example1/*.js || true",
     "example2": "npm test -- --reporter-options reportPath=test-report-example2.html examples/example2-no-pending/*.js || true",
-    "examples": "npm run example1 && npm run example2",
+    "example3": "npm test -- --reporter-options reportPath=test-report-example3.html examples/example3-no-errors/*.js || true",
+    "examples": "npm run example1 && npm run example2 && npm run example3",
     "start": "npm test -- --watch"
   },
   "author": "Gunnar André Reinseth",
