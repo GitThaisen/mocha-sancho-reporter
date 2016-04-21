@@ -12,8 +12,11 @@ describe('Component 1', function () {
         console.log('Output in hooks should also make it to the report.');
       });
       
-      it('should also do stuff in this case', function () {
-        console.log('Yay!');
+      it('should also do stuff in this case', function (done) {
+        setTimeout(function () {
+          console.log('Yay!');
+          done();
+        }, 500)
       });
 
       it('but this fails', function () {

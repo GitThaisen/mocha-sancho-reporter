@@ -107,6 +107,12 @@ body, html {
   color: red;
 }
 
+.duration {
+  color: #bbb;
+  font-size: 12px;
+  font-style: italic;
+}
+
 .details {
   display: none;
   background: #252627;

@@ -1,5 +1,7 @@
 <div class="<%= cssClasses %>">
-  <div class="title" style="margin-left: <%= depth * 20 + 40 %>px"><a href="#" onclick="toggleDetails(event)"><%= title %></a></div>
+  <div class="title" style="margin-left: <%= depth * 20 + 40 %>px">
+    <a href="#" onclick="toggleDetails(event)"><%= title %> <span class="duration"><%= duration %></span></a>
+  </div>
   <div class="details" style="padding-left: <%= depth * 20 + 40 %>px">
     <pre class="hooks-output"><%= hooksOutput %></pre>
     <pre class="test-output"><%= testOutput %></pre>
