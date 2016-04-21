@@ -2,6 +2,10 @@
   "name": "mocha-sancho-reporter",
   "version": "0.2.3",
   "description": "A mocha report that creates a HTML report with included system output.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reinseth/mocha-sancho-reporter"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "jshint",
