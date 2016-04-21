@@ -1,6 +1,6 @@
 {
   "name": "mocha-sancho-reporter",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A mocha report that creates a HTML report with included system output.",
   "repository": {
     "type": "git",
